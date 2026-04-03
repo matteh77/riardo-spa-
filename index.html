@@ -1,0 +1,1689 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RIARDO S.p.A. — Soluzioni Integrate per il Territorio</title>
+  <meta name="description" content="Riardo S.p.A. — Leader nazionale nelle soluzioni integrate per il territorio di Ferrarelle. Eccellenza industriale, radicamento campano, proiezione globale." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #0b1d3a;
+      --navy-deep: #071428;
+      --blue-mid: #1a3a6e;
+      --accent: #3a8fc7;
+      --accent-soft: #5ba8d8;
+      --silver: #c8d4e0;
+      --silver-light: #eaf0f6;
+      --white: #ffffff;
+      --grey-text: #6b7f94;
+      --gold-line: #a08c5a;
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-body: 'DM Sans', sans-serif;
+      --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--white);
+      color: var(--navy);
+      font-size: 16px;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .container {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 4px 12px;
+      margin-bottom: 18px;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-weight: 300;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.15;
+      color: var(--navy);
+      margin-bottom: 1rem;
+    }
+
+    .section-title span {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .section-lead {
+      font-size: 1.05rem;
+      color: var(--grey-text);
+      max-width: 620px;
+      line-height: 1.8;
+    }
+
+    .gold-line {
+      width: 48px;
+      height: 2px;
+      background: var(--gold-line);
+      margin: 22px 0;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 32px;
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      border: none;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: var(--white);
+    }
+
+    .btn-primary:hover {
+      background: var(--blue-mid);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+
+    .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: var(--white);
+    }
+
+    section {
+      padding: 96px 0;
+    }
+
+    #navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(7, 20, 40, 0.97);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(58, 143, 199, 0.15);
+      transition: var(--transition);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .nav-logo {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+
+    .nav-logo .wordmark {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 600;
+      letter-spacing: 4px;
+      color: var(--white);
+    }
+
+    .nav-logo .tagline-nav {
+      font-size: 8px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--silver);
+      margin-top: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      color: var(--silver);
+      transition: color var(--transition);
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-soft);
+    }
+
+    .nav-cta {
+      font-size: 10px !important;
+      background: var(--accent);
+      color: var(--white) !important;
+      padding: 8px 20px;
+    }
+
+    .nav-cta:hover {
+      background: var(--blue-mid) !important;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--white);
+      transition: var(--transition);
+    }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 72px;
+      left: 0;
+      right: 0;
+      background: var(--navy-deep);
+      border-top: 1px solid rgba(58, 143, 199, 0.2);
+      padding: 24px 28px;
+      z-index: 999;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .mobile-menu.open {
+      display: flex;
+    }
+
+    .mobile-menu a {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--silver);
+    }
+
+    #hero {
+      min-height: 100vh;
+      background: linear-gradient(160deg, var(--navy-deep) 0%, var(--navy) 50%, var(--blue-mid) 100%);
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding: 0;
+    }
+
+    #hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(58, 143, 199, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(58, 143, 199, 0.06) 1px, transparent 1px);
+      background-size: 64px 64px;
+    }
+
+    #hero::after {
+      content: '';
+      position: absolute;
+      right: -120px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 680px;
+      height: 680px;
+      border-radius: 50%;
+      border: 1px solid rgba(58, 143, 199, 0.12);
+      box-shadow: 0 0 0 60px rgba(58, 143, 199, 0.04), 0 0 0 120px rgba(58, 143, 199, 0.025);
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      padding-top: 72px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--accent-soft);
+      border: 1px solid rgba(58, 143, 199, 0.35);
+      padding: 6px 16px;
+      margin-bottom: 32px;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.2s forwards;
+    }
+
+    .hero-badge::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent-soft);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-weight: 300;
+      font-size: clamp(2.8rem, 6vw, 5.2rem);
+      line-height: 1.08;
+      color: var(--white);
+      max-width: 760px;
+      margin-bottom: 28px;
+      opacity: 0;
+      animation: fadeUp 0.9s 0.4s forwards;
+    }
+
+    .hero-title em {
+      font-style: italic;
+      color: var(--accent-soft);
+    }
+
+    .hero-sub {
+      font-size: 1.05rem;
+      color: var(--silver);
+      max-width: 560px;
+      line-height: 1.8;
+      margin-bottom: 48px;
+      font-weight: 300;
+      opacity: 0;
+      animation: fadeUp 0.9s 0.6s forwards;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      opacity: 0;
+      animation: fadeUp 0.9s 0.8s forwards;
+    }
+
+    .hero-metrics {
+      display: flex;
+      gap: 48px;
+      margin-top: 72px;
+      padding-top: 40px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      flex-wrap: wrap;
+      opacity: 0;
+      animation: fadeUp 0.9s 1s forwards;
+    }
+
+    .hero-metric .num {
+      font-family: var(--font-display);
+      font-size: 2.4rem;
+      font-weight: 300;
+      color: var(--white);
+      line-height: 1;
+    }
+
+    .hero-metric .num span {
+      font-size: 1.4rem;
+      color: var(--accent-soft);
+    }
+
+    .hero-metric .label {
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--silver);
+      margin-top: 6px;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(24px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    #chi-siamo { background: var(--white); }
+
+    .chi-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .chi-left .section-lead { margin-bottom: 32px; }
+
+    .mv-block {
+      padding: 24px 28px;
+      border-left: 3px solid var(--accent);
+      margin-bottom: 16px;
+      background: var(--silver-light);
+    }
+
+    .mv-block strong {
+      display: block;
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .mv-block p {
+      font-size: 0.93rem;
+      color: var(--grey-text);
+      line-height: 1.7;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+    }
+
+    .stat-box {
+      background: var(--navy);
+      padding: 32px 28px;
+      transition: var(--transition);
+    }
+
+    .stat-box:hover { background: var(--blue-mid); }
+
+    .stat-box .num {
+      font-family: var(--font-display);
+      font-size: 2.8rem;
+      font-weight: 300;
+      color: var(--white);
+      line-height: 1;
+    }
+
+    .stat-box .desc {
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--silver);
+      margin-top: 8px;
+      line-height: 1.5;
+    }
+
+    #valori {
+      background: var(--navy-deep);
+      color: var(--white);
+    }
+
+    #valori .section-title { color: var(--white); }
+    #valori .gold-line { background: var(--gold-line); }
+
+    .valori-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1px;
+      margin-top: 56px;
+    }
+
+    .valore-card {
+      background: rgba(255, 255, 255, 0.04);
+      padding: 40px 28px;
+      border-top: 2px solid transparent;
+      transition: var(--transition);
+    }
+
+    .valore-card:hover {
+      background: rgba(58, 143, 199, 0.08);
+      border-top-color: var(--accent);
+    }
+
+    .valore-num {
+      font-family: var(--font-display);
+      font-size: 2.4rem;
+      font-weight: 300;
+      color: rgba(58, 143, 199, 0.25);
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+
+    .valore-name {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent-soft);
+      margin-bottom: 14px;
+    }
+
+    .valore-text {
+      font-size: 0.88rem;
+      color: var(--silver);
+      line-height: 1.7;
+    }
+
+    #divisioni { background: var(--silver-light); }
+
+    .divisioni-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      margin-top: 56px;
+    }
+
+    .divisione-card {
+      background: var(--white);
+      padding: 48px 40px;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .divisione-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent), var(--blue-mid));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: var(--transition);
+    }
+
+    .divisione-card:hover::before { transform: scaleX(1); }
+
+    .divisione-card:hover {
+      box-shadow: 0 8px 40px rgba(11, 29, 58, 0.1);
+    }
+
+    .div-code {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    .div-name {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: var(--navy);
+      line-height: 1.2;
+      margin-bottom: 18px;
+    }
+
+    .div-text {
+      font-size: 0.9rem;
+      color: var(--grey-text);
+      line-height: 1.75;
+    }
+
+    .div-tag {
+      display: block;
+      margin-top: 20px;
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--accent);
+      border-top: 1px solid var(--silver);
+      padding-top: 14px;
+    }
+
+    #leadership { background: var(--white); }
+
+    .leadership-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin-top: 56px;
+    }
+
+    .leader-card {
+      border: 1px solid var(--silver);
+      overflow: hidden;
+      transition: var(--transition);
+    }
+
+    .leader-card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 4px 24px rgba(58, 143, 199, 0.1);
+    }
+
+    .leader-avatar {
+      height: 180px;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--blue-mid) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .leader-avatar::after {
+      content: attr(data-initials);
+      position: absolute;
+      font-family: var(--font-display);
+      font-size: 2.8rem;
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .leader-body { padding: 28px; }
+
+    .leader-role {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .leader-name {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+
+    .leader-bio {
+      font-size: 0.85rem;
+      color: var(--grey-text);
+      line-height: 1.7;
+    }
+
+    #news { background: var(--silver-light); }
+
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 56px;
+    }
+
+    .news-card {
+      background: var(--white);
+      overflow: hidden;
+      transition: var(--transition);
+      border-bottom: 3px solid transparent;
+    }
+
+    .news-card:hover {
+      transform: translateY(-4px);
+      border-bottom-color: var(--accent);
+      box-shadow: 0 12px 40px rgba(11, 29, 58, 0.08);
+    }
+
+    .news-img {
+      height: 170px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.4);
+      font-weight: 500;
+    }
+
+    .news-img.n1 { background: linear-gradient(135deg, #0b1d3a, #1a3a6e); }
+    .news-img.n2 { background: linear-gradient(135deg, #1a3a6e, #3a8fc7); }
+    .news-img.n3 { background: linear-gradient(135deg, #0b1d3a, #3a5080); }
+
+    .news-body { padding: 28px; }
+
+    .news-meta {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    .news-title {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: var(--navy);
+      line-height: 1.3;
+      margin-bottom: 12px;
+    }
+
+    .news-excerpt {
+      font-size: 0.88rem;
+      color: var(--grey-text);
+      line-height: 1.7;
+    }
+
+    .news-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 18px;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .news-link::after { content: '→'; }
+
+    #carriere { background: var(--white); }
+
+    .jobs-list {
+      margin-top: 48px;
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+    }
+
+    .job-row {
+      display: grid;
+      grid-template-columns: 1fr auto auto;
+      align-items: center;
+      gap: 32px;
+      padding: 28px 32px;
+      background: var(--silver-light);
+      transition: var(--transition);
+      cursor: pointer;
+      border-left: 3px solid transparent;
+    }
+
+    .job-row:hover {
+      background: var(--white);
+      border-left-color: var(--accent);
+      box-shadow: 0 2px 20px rgba(11, 29, 58, 0.06);
+    }
+
+    .job-title-text {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 400;
+      color: var(--navy);
+    }
+
+    .job-sub {
+      font-size: 0.82rem;
+      color: var(--grey-text);
+      margin-top: 4px;
+    }
+
+    .job-loc {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--grey-text);
+    }
+
+    .job-cta-link {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--accent);
+      white-space: nowrap;
+    }
+
+    #faq { background: var(--silver-light); }
+
+    .faq-list {
+      margin-top: 48px;
+      max-width: 780px;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--silver);
+      overflow: hidden;
+    }
+
+    .faq-q {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 0;
+      cursor: pointer;
+      font-weight: 500;
+      color: var(--navy);
+      font-size: 0.98rem;
+      gap: 20px;
+    }
+
+    .faq-q .icon {
+      width: 22px;
+      height: 22px;
+      border: 1px solid var(--silver);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 14px;
+      color: var(--accent);
+      transition: var(--transition);
+    }
+
+    .faq-item.open .faq-q .icon { transform: rotate(45deg); }
+
+    .faq-a {
+      display: none;
+      padding: 0 0 22px;
+      font-size: 0.9rem;
+      color: var(--grey-text);
+      line-height: 1.75;
+    }
+
+    .faq-item.open .faq-a { display: block; }
+
+    #testimonianze { background: var(--navy-deep); }
+
+    .testi-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 56px;
+    }
+
+    .testi-card {
+      padding: 40px 36px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.03);
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .testi-card:hover {
+      background: rgba(58, 143, 199, 0.07);
+      border-color: rgba(58, 143, 199, 0.3);
+    }
+
+    .testi-quote {
+      font-family: var(--font-display);
+      font-size: 3rem;
+      font-weight: 300;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 20px;
+      opacity: 0.4;
+    }
+
+    .testi-text {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--white);
+      line-height: 1.55;
+      margin-bottom: 24px;
+    }
+
+    .testi-author {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent-soft);
+    }
+
+    .testi-role {
+      font-size: 9px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--grey-text);
+      margin-top: 4px;
+    }
+
+    #contatti {
+      background: var(--navy-deep);
+      color: var(--white);
+    }
+
+    #contatti .section-title { color: var(--white); }
+    #contatti .section-lead { color: var(--silver); }
+    #contatti .gold-line { background: var(--gold-line); }
+
+    .contatti-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      margin-top: 56px;
+    }
+
+    .contact-info-block { margin-bottom: 28px; }
+
+    .contact-info-label {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    .contact-info-value {
+      font-size: 0.95rem;
+      color: var(--silver-light);
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .form-field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form-field label {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--silver);
+    }
+
+    .form-field input,
+    .form-field textarea,
+    .form-field select {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: var(--white);
+      padding: 12px 16px;
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      outline: none;
+      transition: var(--transition);
+    }
+
+    .form-field input:focus,
+    .form-field textarea:focus,
+    .form-field select:focus {
+      border-color: var(--accent);
+      background: rgba(58, 143, 199, 0.08);
+    }
+
+    .form-field select option {
+      background: var(--navy-deep);
+    }
+
+    .form-field textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    footer {
+      background: #040e1e;
+      color: var(--silver);
+      padding: 48px 0 32px;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    .footer-brand .wordmark {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 600;
+      letter-spacing: 4px;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+
+    .footer-brand .tagline {
+      font-size: 9px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--grey-text);
+      margin-bottom: 18px;
+    }
+
+    .footer-brand p {
+      font-size: 0.83rem;
+      line-height: 1.7;
+      color: var(--grey-text);
+    }
+
+    .footer-col h4 {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 18px;
+    }
+
+    .footer-col ul {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-col ul li a {
+      font-size: 0.85rem;
+      color: var(--grey-text);
+      transition: color var(--transition);
+    }
+
+    .footer-col ul li a:hover { color: var(--accent-soft); }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 28px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-copy {
+      font-size: 0.8rem;
+      color: var(--grey-text);
+    }
+
+    .footer-legal {
+      display: flex;
+      gap: 24px;
+    }
+
+    .footer-legal a {
+      font-size: 0.8rem;
+      color: var(--grey-text);
+      transition: color var(--transition);
+    }
+
+    .footer-legal a:hover { color: var(--accent-soft); }
+
+    .parody-notice {
+      margin-top: 24px;
+      width: 100%;
+      text-align: center;
+      padding: 14px 24px;
+      background: rgba(58, 143, 199, 0.08);
+      border: 1px solid rgba(58, 143, 199, 0.2);
+      font-size: 0.8rem;
+      color: var(--accent-soft);
+      letter-spacing: 0.5px;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 1024px) {
+      .valori-grid { grid-template-columns: repeat(3, 1fr); }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+      .testi-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      section { padding: 64px 0; }
+      .chi-grid,
+      .divisioni-grid,
+      .leadership-grid,
+      .news-grid,
+      .testi-grid,
+      .contatti-grid { grid-template-columns: 1fr; }
+      .chi-grid,
+      .contatti-grid { gap: 48px; }
+      .valori-grid { grid-template-columns: 1fr 1fr; }
+      .footer-top { grid-template-columns: 1fr; gap: 32px; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .hero-metrics { gap: 24px; }
+      .job-row { grid-template-columns: 1fr; gap: 8px; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 480px) {
+      .valori-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <nav id="navbar">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="#" class="nav-logo">
+          <span class="wordmark">RIARDO</span>
+          <span class="tagline-nav">S.p.A. — Soluzioni Integrate per il Territorio</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="#chi-siamo">Chi siamo</a></li>
+          <li><a href="#divisioni">Divisioni</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#carriere">Carriere</a></li>
+          <li><a href="#contatti" class="nav-cta">Contatti</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger" aria-label="Menu" role="button" tabindex="0" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#chi-siamo">Chi siamo</a>
+    <a href="#divisioni">Divisioni</a>
+    <a href="#news">News</a>
+    <a href="#carriere">Carriere</a>
+    <a href="#contatti">Contatti</a>
+  </div>
+
+  <section id="hero">
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-badge">
+          Gruppo Industriale Italiano &nbsp;·&nbsp; Fondato nel 1927
+        </div>
+
+        <h1 class="hero-title">
+          Leader nazionale nelle<br />soluzioni integrate<br />
+          per <em>il territorio di Riardo</em>
+        </h1>
+
+        <p class="hero-sub">
+          Da quasi un secolo, Riardo S.p.A. presidia con rigore e continuità operativa il comparto
+          dell'integrazione sistemica avanzata, con un radicamento territoriale che costituisce
+          la nostra leva competitiva più autentica — riconosciuta e, ad oggi, inimitabile.
+        </p>
+
+        <div class="hero-ctas">
+          <a href="#chi-siamo" class="btn btn-primary">Scopri il Gruppo</a>
+          <a href="#divisioni" class="btn btn-outline">Le nostre divisioni</a>
+        </div>
+
+        <div class="hero-metrics">
+          <div class="hero-metric">
+            <div class="num">69</div>
+            <div class="label">Anni di storia</div>
+          </div>
+          <div class="hero-metric">
+            <div class="num">1</div>
+            <div class="label">Sede operativa</div>
+          </div>
+          <div class="hero-metric">
+            <div class="num">3</div>
+            <div class="label">Reparti strategici</div>
+          </div>
+          <div class="hero-metric">
+            <div class="num">14K<span>+</span></div>
+            <div class="label">Porzioni erogate / anno</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="chi-siamo">
+    <div class="container">
+      <div class="chi-grid">
+        <div class="chi-left reveal">
+          <div class="tag">Il Gruppo</div>
+          <h2 class="section-title">Chi siamo, dove siamo, <span>da dove veniamo</span></h2>
+          <div class="gold-line"></div>
+          <p class="section-lead">
+            Fondata nel 1927 a Ferrarelle, Riardo S.p.A. è oggi un gruppo industriale di riferimento nel comparto
+            dell'integrazione sistemica avanzata e delle soluzioni operative ad alto contenuto territoriale.
+            La nostra sede unica — scelta non per contingenza, ma per convinzione strategica — si trova nel cuore
+            di un'area che il Gruppo ha contribuito a definire prima ancora che il territorio stesso ne avesse
+            piena consapevolezza.
+          </p>
+          <p class="section-lead" style="margin-top:16px;">
+            Con due reparti pienamente operativi e una vocazione industriale che non ha mai ceduto alle mode del
+            decentramento, Riardo S.p.A. ha costruito in quasi un secolo un patrimonio di competenze, relazioni
+            e know-how che nessuna espansione geografica avrebbe potuto replicare.
+          </p>
+          <div style="margin-top:32px;">
+            <div class="mv-block">
+              <strong>Mission</strong>
+              <p>Fornire soluzioni integrate di eccellenza a servizio del territorio di Ferrarelle e dei suoi interlocutori strategici, generando valore durevole per gli stakeholder, per la comunità campana e per chiunque comprenda il senso profondo di ciò che facciamo.</p>
+            </div>
+            <div class="mv-block">
+              <strong>Vision</strong>
+              <p>Essere riconosciuti, entro il 2030, come il gruppo industriale italiano più coerente con la propria identità territoriale: un'azienda che sa esattamente dove si trova e non ha intenzione di spostarsi.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="chi-right reveal">
+          <div class="stats-grid">
+            <div class="stat-box">
+              <div class="num">69</div>
+              <div class="desc">Anni di storia<br />ininterrotta</div>
+            </div>
+            <div class="stat-box">
+              <div class="num">1</div>
+              <div class="desc">Sede operativa<br />scelta con cura</div>
+            </div>
+            <div class="stat-box">
+              <div class="num">3</div>
+              <div class="desc">Reparti strategici<br />pienamente operativi</div>
+            </div>
+            <div class="stat-box">
+              <div class="num">14.000</div>
+              <div class="desc">Porzioni di pastieras<br />erogate annualmente*</div>
+            </div>
+          </div>
+          <p style="font-size:0.75rem; color:var(--grey-text); margin-top:12px; padding-left:4px;">
+            * Valore espresso in Unità Conviviali Equivalenti (UCE), indicatore ESG adottato dal Gruppo
+            nel 2019 nell'ambito del framework di rendicontazione non finanziaria integrata.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="valori">
+    <div class="container">
+      <div class="reveal" style="text-align:center; max-width:600px; margin:0 auto;">
+        <div class="tag" style="border-color:rgba(58,143,199,0.4); color:var(--accent-soft);">Identità</div>
+        <h2 class="section-title" style="color:var(--white);">I valori che <span>ci definiscono</span></h2>
+        <div class="gold-line" style="margin:22px auto;"></div>
+      </div>
+
+      <div class="valori-grid reveal">
+        <div class="valore-card">
+          <div class="valore-num">01</div>
+          <div class="valore-name">Tradizione</div>
+          <p class="valore-text">La tradizione non è nostalgia: è infrastruttura. In Riardo S.p.A. ogni processo operativo affonda le radici in pratiche consolidate che il tempo ha dimostrato essere non negoziabili. La continuità non è inerzia — è una scelta deliberata e orgogliosamente mantenuta dal 1927.</p>
+        </div>
+
+        <div class="valore-card">
+          <div class="valore-num">02</div>
+          <div class="valore-name">Innovazione</div>
+          <p class="valore-text">Innoviamo all'interno di perimetri ben definiti, con metodo e con il rispetto dovuto a ciò che già funziona. L'innovazione, per il Gruppo, non è un fine: è uno strumento al servizio di qualcosa di più grande e difficile da spiegare a chi non conosce il territorio.</p>
+        </div>
+
+        <div class="valore-card">
+          <div class="valore-num">03</div>
+          <div class="valore-name">Pastieras</div>
+          <p class="valore-text">La pastieras non è un prodotto. È un paradigma operativo. È la sintesi più compiuta tra precisione tecnica, radicamento culturale e continuità intergenerazionale. Benefit che chi di Riardo non merita. Il Gruppo ha formalizzato questo valore nel 2009 e nessuno ha contestato la decisione in sede di Consiglio.</p>
+        </div>
+
+        <div class="valore-card">
+          <div class="valore-num">04</div>
+          <div class="valore-name">Territorialità</div>
+          <p class="valore-text">Il territorio di Ferrarelle non è un vincolo geografico: è il perimetro entro il quale Riardo S.p.A. ha scelto di esercitare la propria eccellenza. Una scelta precisa, deliberata e — va detto — non ancora del tutto compresa dall'esterno del comparto, specialmente da chi fa parte di province di Napoli come Mugnano, Quarto o Calvizzano.</p>
+        </div>
+
+        <div class="valore-card">
+          <div class="valore-num">05</div>
+          <div class="valore-name">Eccellenza Campana</div>
+          <p class="valore-text">L'eccellenza campana non è un'etichetta geografica: è un sistema di valori, una postura cognitiva, una modalità di stare nel mondo produttivo che Riardo S.p.A. ha contribuito a codificare prima ancora che il comparto ne rivendicasse la paternità concettuale.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="divisioni">
+    <div class="container">
+      <div class="reveal">
+        <div class="tag">Business Units</div>
+        <h2 class="section-title">Le nostre <span>divisioni operative</span></h2>
+        <div class="gold-line"></div>
+        <p class="section-lead">Due reparti strategici, un'unica visione sistemica. La struttura divisionale di Riardo S.p.A. è il risultato di decenni di ottimizzazione organizzativa, condotta con assoluta autonomia rispetto alle mode del mercato internazionale.</p>
+      </div>
+
+      <div class="divisioni-grid reveal">
+        <div class="divisione-card">
+          <div class="div-code">BU — 01 / Sistemistica</div>
+          <div class="div-name">Aerospace Systems Integration</div>
+          <p class="div-text">
+            Il nucleo tecnologico del Gruppo. La divisione ASI opera nell'ambito dell'integrazione
+            di sottosistemi avanzati pastieras, nella gestione di interfacce critiche multi-dominio e nello
+            sviluppo di architetture ridondanti per applicazioni ad elevata affidabilità.
+            Le nostre competenze spaziano dall'analisi FMEA alla validazione di protocolli operativi
+            complessi, garantendo prestazioni in linea con i più stringenti standard internazionali —
+            e con quelli interni, che sono considerevolmente più stringenti.
+          </p>
+          <span class="div-tag">Certificata EN 6969 · DO-178C · Norma Interna ASI-1927</span>
+        </div>
+
+        <div class="divisione-card">
+          <div class="div-code">BU — 02 / Operazioni</div>
+          <div class="div-name">Advanced Campania Operations</div>
+          <p class="div-text">
+            La divisione ACO gestisce le operazioni distribuite ad alta complessità sull'area Aerosoft
+            di riferimento, coordinando risorse umane, logistiche e relazionali in un framework
+            di command-and-control sviluppato internamente nel corso di oltre nove decenni.
+            Particolare attenzione è dedicata alla gestione delle interfacce con gli enti territoriali,
+            con cui il Gruppo intrattiene relazioni che vanno ben al di là della mera formalità istituzionale.
+          </p>
+          <span class="div-tag">Area di copertura: Provincia CE · Hinterland Strategico · Zona Ferrarelle</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="leadership">
+    <div class="container">
+      <div class="reveal">
+        <div class="tag">Governance</div>
+        <h2 class="section-title">Il nostro <span>team di leadership</span></h2>
+        <div class="gold-line"></div>
+        <p class="section-lead">La solidità di Riardo S.p.A. risiede nelle persone. Un management team di comprovata esperienza, con un profilo bilanciato tra competenza tecnica, visione strategica e conoscenza profonda — talvolta esclusiva — del territorio di riferimento.</p>
+      </div>
+
+      <div class="leadership-grid reveal">
+        <div class="leader-card">
+          <div class="leader-avatar" data-initials="FG"></div>
+          <div class="leader-body">
+            <div class="leader-role">Direttore d'Area — Managing Director</div>
+            <div class="leader-name">Fabio Guido</div>
+            <p class="leader-bio">Con oltre quattro decenni di presenza continuativa nel management operativo del Gruppo, Fabio Guido incarna la figura del direttore pulizia bagni nella sua forma più pura e sedimentata. La sua supervisione dell'area campana è considerata dal CdA un asset intangibile di primaria importanza: non cedibile, non replicabile, non oggetto di successione pianificata nel breve termine.</p>
+          </div>
+        </div>
+
+        <div class="leader-card">
+          <div class="leader-avatar" data-initials="GE"></div>
+          <div class="leader-body">
+            <div class="leader-role">Responsabile Espansione Alto Casertano</div>
+            <div class="leader-name">Giuseppe Endolo</div>
+            <p class="leader-bio">Responsabile dell'espansione strategica nell'Alto Napoletano dal 2014. In dieci anni ha inaugurato due sedi operative, stabilito relazioni istituzionali con tutte le amministrazioni comunali dell'area e prodotto trentadue report interni sull'opportunità di aprire una terza sede a Mugnano. Il report numero trentatré è atteso per il Q3 2025. Nessuno ne ha richiesto l'interruzione.</p>
+          </div>
+        </div>
+
+        <div class="leader-card">
+          <div class="leader-avatar" data-initials="PC"></div>
+          <div class="leader-body">
+            <div class="leader-role">Chief Pastiera Officer</div>
+            <div class="leader-name">Peppe Caruso</div>
+            <p class="leader-bio">Il dott. Caruso guida il Reparto Strategico Pastieras dalla sua fondazione nel 2009 con una dedizione che i colleghi descrivono come "davvero buona" e che lui stesso preferisce definire "fatta in casa". Ha conseguito una specializzazione post-dottorale in Confectionery Process Optimization presso un istituto che preferirebbe non rendere pubblico.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="news">
+    <div class="container">
+      <div class="reveal">
+        <div class="tag">Comunicati Stampa</div>
+        <h2 class="section-title">Ultime <span>notizie dal Gruppo</span></h2>
+        <div class="gold-line"></div>
+      </div>
+
+      <div class="news-grid reveal">
+        <div class="news-card">
+          <div class="news-img n1">Comunicato Stampa</div>
+          <div class="news-body">
+            <div class="news-meta">14 Marzo 2025 &nbsp;·&nbsp; Sviluppo Strategico</div>
+            <div class="news-title">Riardo S.p.A. rafforza la sua presenza in Campania</div>
+            <p class="news-excerpt">Il Consiglio di Amministrazione ha approvato all'unanimità il piano di consolidamento territoriale 2025–2027, confermando l'impegno del Gruppo nell'area Ferrarelle. "Siamo qui. Siamo stati qui. Continueremo ad essere qui", ha dichiarato il Managing Director Fabio Guido in apertura della conferenza stampa, precisando che non erano previste ulteriori domande su quel punto specifico.</p>
+            <a href="#" class="news-link" onclick="return false;">Leggi il comunicato</a>
+          </div>
+        </div>
+
+        <div class="news-card">
+          <div class="news-img n2">Accordo Strategico</div>
+          <div class="news-body">
+            <div class="news-meta">18 Febbraio 2025 &nbsp;·&nbsp; Partnership</div>
+            <div class="news-title">Accordo strategico con il comparto pasquale</div>
+            <p class="news-excerpt">Riardo S.p.A. ha siglato un accordo di collaborazione pluriennale con un consorzio di produttori campani nell'ambito del programma di valorizzazione del Reparto Strategico Pastiera. L'intesa prevede la fornitura di 14.000 porzioni certificate annue e l'adozione condivisa di standard conformi alla norma interna RSP-2009, definita dalle parti "il riferimento tecnico più rigoroso disponibile nel settore".</p>
+            <a href="#" class="news-link" onclick="return false;">Leggi il comunicato</a>
+          </div>
+        </div>
+
+        <div class="news-card">
+          <div class="news-img n3">Nota Istituzionale</div>
+          <div class="news-body">
+            <div class="news-meta">22 Gennaio 2025 &nbsp;·&nbsp; Comunicazione</div>
+            <div class="news-title">Lorenzo confonde ancora una città con un'azienda</div>
+            <p class="news-excerpt">A seguito della circolazione, in ambienti non meglio identificati, di alcune dichiarazioni attribuite a un soggetto noto come "Lorenz" — il quale avrebbe sostenuto che Riardo è un'azienda — l'ufficio comunicazione del Gruppo ha emesso una nota di chiarimento. "Riardo S.p.A. esiste, opera e fattura", recita il documento ufficiale. "Il territorio ha semplicemente avuto il privilegio di condividere il nome con un'azienda leader del settore."</p>
+            <a href="#" class="news-link" onclick="return false;">Leggi il comunicato</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="carriere">
+    <div class="container">
+      <div class="reveal">
+        <div class="tag">Risorse Umane</div>
+        <h2 class="section-title">Lavora con <span>noi</span></h2>
+        <div class="gold-line"></div>
+        <p class="section-lead">Riardo S.p.A. seleziona profili che condividano i nostri valori fondanti: rigore analitico, spirito di appartenenza territoriale e attitudine a operare in contesti ad elevata specificità campana. Le candidature prive di motivazione territoriale vengono conservate ma raramente rilette.</p>
+      </div>
+
+      <div class="jobs-list reveal">
+        <div class="job-row">
+          <div>
+            <div class="job-title-text">Junior Riardo Specialist</div>
+            <div class="job-sub">Divisione ASI · Tempo indeterminato · Requisito: familiarità con il territorio campano documentabile con il contesto operativo dell'azienda Riardo</div>
+          </div>
+          <div class="job-loc">Caserta, IT</div>
+          <div class="job-cta-link">Candidati</div>
+        </div>
+
+        <div class="job-row">
+          <div>
+            <div class="job-title-text">Addetto Relazioni Istituzionali con Caserta</div>
+            <div class="job-sub">Direzione Centrale · Full-time · Il candidato dovrà conoscere personalmente almeno tre interlocutori istituzionali dell'area. Il quarto è considerato un plus.</div>
+          </div>
+          <div class="job-loc">Mugnano, IT</div>
+          <div class="job-cta-link">Candidati</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="container">
+      <div class="reveal">
+        <div class="tag">Domande Frequenti</div>
+        <h2 class="section-title">Risposte <span>ufficiali</span></h2>
+        <div class="gold-line"></div>
+      </div>
+
+      <div class="faq-list reveal">
+        <div class="faq-item">
+          <div class="faq-q">Riardo è un comune?<div class="icon">+</div></div>
+          <div class="faq-a">No. Riardo è una realtà industriale. Che esista anche un comune omonimo in provincia di Caserta è una circostanza che il team legale interno ha esaminato con la dovuta attenzione nelle prime settimane del 1927. La posizione del Gruppo è che il territorio abbia avuto l'onore di precedere l'azienda sul piano anagrafico, ma che la questione sia ormai superata nei fatti — se non ancora nella percezione di soggetti come Lorenzo.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonianze">
+    <div class="container">
+      <div class="reveal" style="text-align:center; max-width:600px; margin:0 auto;">
+        <div class="tag" style="border-color:rgba(58,143,199,0.4); color:var(--accent-soft);">Voci dal Territorio</div>
+        <h2 class="section-title" style="color:var(--white);">Cosa dicono di <span>noi</span></h2>
+        <div class="gold-line" style="margin:22px auto;"></div>
+      </div>
+
+      <div class="testi-grid reveal">
+        <div class="testi-card">
+          <div class="testi-quote">"</div>
+          <p class="testi-text">Pensavo fosse un'azienda. Poi ho capito che è una città in provincia di Caserta. Da quel momento molte cose nella mia vita professionale hanno acquistato un senso che prima mi sfuggiva.</p>
+          <div class="testi-author">Ing. M. Lorenzo</div>
+          <div class="testi-role">Partner strategico, Area Campania</div>
+        </div>
+
+        <div class="testi-card">
+          <div class="testi-quote">"</div>
+          <p class="testi-text">Da quando conosco Riardo S.p.A., guardo la Campania con altri occhi. Non saprei dire esattamente quali. Ma sono occhi diversi. Migliori, probabilmente.</p>
+          <div class="testi-author">Dott.ssa C. Amendola</div>
+          <div class="testi-role">Responsabile acquisti, settore integrazione</div>
+        </div>
+
+        <div class="testi-card">
+          <div class="testi-quote">"</div>
+          <p class="testi-text">Il livello di presidio territoriale espresso da Riardo S.p.A. è tale da rendere superflua qualsiasi benchmark analysis. Ci siamo arresi al confronto già nel kickoff.</p>
+          <div class="testi-author">Avv. G. Ferrante</div>
+          <div class="testi-role">Advisor esterno, relazioni istituzionali</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contatti">
+    <div class="container">
+      <div class="reveal">
+        <div class="tag">Contatti</div>
+        <h2 class="section-title" style="color:var(--white);">Scrivici o <span>vieni a trovarci</span></h2>
+        <div class="gold-line"></div>
+        <p class="section-lead">Per informazioni istituzionali, candidature, richieste di partnership o qualsiasi altra interlocuzione con il Gruppo, gli uffici di Riardo S.p.A. sono a disposizione. Si prega di specificare sempre la motivazione del contatto e, ove pertinente, il proprio rapporto con il territorio casertano.</p>
+      </div>
+
+      <div class="contatti-grid reveal">
+        <div>
+          <div class="contact-info-block">
+            <div class="contact-info-label">Sede Legale &amp; Operativa (unica)</div>
+            <div class="contact-info-value">Viale dell'Integrazione Sistemica, 14<br />81100 Caserta (CE) — Italia</div>
+          </div>
+          <div class="contact-info-block">
+            <div class="contact-info-label">Centralino</div>
+            <div class="contact-info-value">+39 333 squalo 73</div>
+          </div>
+          <div class="contact-info-block">
+            <div class="contact-info-label">Email Istituzionale</div>
+            <div class="contact-info-value">info@riardospa.example</div>
+          </div>
+          <div class="contact-info-block">
+            <div class="contact-info-label">Reparto Strategico Pastiera — Linea Diretta</div>
+            <div class="contact-info-value">pastiera@riardospa.example</div>
+          </div>
+          <div class="contact-info-block">
+            <div class="contact-info-label">Orari di ricevimento</div>
+            <div class="contact-info-value">Lun–Ven: 9:00–18:00<br />Periodo pasquale: orari estesi su richiesta motivata</div>
+          </div>
+        </div>
+
+        <div>
+          <form class="contact-form" onsubmit="return false;">
+            <div class="form-row">
+              <div class="form-field">
+                <label>Nome</label>
+                <input type="text" placeholder="Il suo nome" />
+              </div>
+              <div class="form-field">
+                <label>Cognome</label>
+                <input type="text" placeholder="Il suo cognome" />
+              </div>
+            </div>
+            <div class="form-field">
+              <label>Email</label>
+              <input type="email" placeholder="email@esempio.it" />
+            </div>
+            <div class="form-field">
+              <label>Oggetto</label>
+              <select>
+                <option value="">Seleziona area di interesse</option>
+                <option>Informazioni generali sul Gruppo</option>
+                <option>Partnership istituzionale</option>
+                <option>Candidatura spontanea</option>
+                <option>Reparto Strategico Pastiera</option>
+                <option>Chiarimento: Riardo comune vs Riardo S.p.A.</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label>Messaggio</label>
+              <textarea placeholder="La sua comunicazione istituzionale..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%; margin-top:8px; letter-spacing:2px;">Invia la richiesta</button>
+            <p style="font-size:0.75rem; color:var(--grey-text); margin-top:8px; text-align:center;">
+              I dati forniti saranno trattati ai sensi del Regolamento UE 2016/679. Questo form è dimostrativo e non invia alcun dato reale.
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="wordmark">RIARDO</div>
+          <div class="tagline">S.p.A. — Soluzioni Integrate per il Territorio</div>
+          <p>Gruppo industriale italiano a forte radicamento territoriale, orientato alla continuità operativa, all'integrazione sistemica e alla valorizzazione delle eccellenze campane a elevata specificità.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Azienda</h4>
+          <ul>
+            <li><a href="#chi-siamo">Chi siamo</a></li>
+            <li><a href="#divisioni">Divisioni</a></li>
+            <li><a href="#leadership">Leadership</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Media</h4>
+          <ul>
+            <li><a href="#news">News</a></li>
+            <li><a href="#testimonianze">Testimonianze</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contatti</h4>
+          <ul>
+            <li><a href="#contatti">Contatti</a></li>
+            <li><a href="#carriere">Carriere</a></li>
+            <li><a href="#" onclick="return false;">Investor Relations</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copy">© 2025 Riardo S.p.A. — Tutti i diritti riservati. P.IVA non applicabile per ragioni strategiche.</div>
+        <div class="footer-legal">
+          <a href="#" onclick="return false;">Privacy Policy</a>
+          <a href="#" onclick="return false;">Termini di servizio</a>
+          <a href="#" onclick="return false;">Governance</a>
+        </div>
+        <div class="parody-notice">Sito dimostrativo/parodico: i contenuti sono volutamente ironici e non rappresentano un'entità reale.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const navbar = document.getElementById('navbar');
+
+    if (hamburger && mobileMenu) {
+      const toggleMenu = () => {
+        const isOpen = mobileMenu.classList.toggle('open');
+        hamburger.setAttribute('aria-expanded', String(isOpen));
+      };
+
+      hamburger.addEventListener('click', toggleMenu);
+      hamburger.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          toggleMenu();
+        }
+      });
+
+      mobileMenu.querySelectorAll('a').forEach((a) => {
+        a.addEventListener('click', () => {
+          mobileMenu.classList.remove('open');
+          hamburger.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.08,
+        rootMargin: '0px 0px -40px 0px'
+      });
+
+      document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+    } else {
+      document.querySelectorAll('.reveal').forEach((el) => el.classList.add('visible'));
+    }
+
+    document.querySelectorAll('.faq-q').forEach((q) => {
+      q.addEventListener('click', () => {
+        const item = q.parentElement;
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach((i) => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+
+    window.addEventListener('scroll', () => {
+      if (navbar) {
+        navbar.style.borderBottomColor = window.scrollY > 60
+          ? 'rgba(58,143,199,0.25)'
+          : 'rgba(58,143,199,0.15)';
+      }
+    });
+  </script>
+</body>
+</html>
